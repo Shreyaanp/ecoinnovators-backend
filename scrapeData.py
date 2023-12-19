@@ -32,9 +32,11 @@ def download_file(url, folder_path):
 				file.write(chunk)
 
 		print(f"Downloaded: {file_name}")
+		return
+	print("Something went wrong")
 
 # Create the folder if it doesn't exist
 os.makedirs(local_folder_path, exist_ok=True)
-for url in urls:
-	dataset_url = url_root + url
-	download_file(dataset_url, local_folder_path)
+#for url in urls:
+#	dataset_url = url_root + url
+#	download_file(dataset_url, local_folder_path)

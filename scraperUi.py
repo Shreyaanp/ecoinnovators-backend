@@ -3,7 +3,7 @@ import os
 from scrapeData import *
 
 from dash import dcc, html, callback
-from dash.dependencies import Input, Output, State
+from dash.dependencies import Input, Output, State, ALL
 from dash.exceptions import PreventUpdate
 
 base_dir = "Scraped/"
@@ -105,6 +105,9 @@ def get_file_list():
 def update_file_list(n_intervals):
 	files = get_file_list()
 
+	if not files:
+		return []
+
 	children = [
 		html.Div([
 			dcc.Checklist(
@@ -125,12 +128,15 @@ def update_file_list(n_intervals):
 @app.callback(
 	Output("dummy-output-2", "children"),
 	Input("file-delete", "n_clicks"),
-	[[State({'type': 'file-select', 'index': i}, 'value') for i in range(len(get_file_list()))]]
+	[State({'type': 'file-select', 'index': ALL}, 'value')]
 )
 def delete_selected_file(n_clicks, files):
-	to_delete = [f[0] for f in files if f]
-	for f in to_delete:
-		print(os.remove(base_dir + f))
+	if n_clicks > 0 and files:
+		to_delete = [f[0] for f in files if f]
+		for f in to_delete:
+			print(os.remove(base_dir + f))
+	else:
+		raise PreventUpdate
 	return [""]
 
 if __name__ == "__main__":

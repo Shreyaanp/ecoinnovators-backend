@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "sih-ecoinnovators",
+  "private_key_id": "487d0233c93205deea30a376f3d582372588fbe0",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDb63wsdWVRGvnz\nj1QLf+GCwVm0ozDdzD2iIlfMANe/66vz6qUzsdpSKs7zIjrESgAH/HSlJxe5ATJW\nfDzFIcmzUOJeTbzF6daKPfRGZgjuO+MBQ8T52+WwTI5PlSaAwmUINTxv60o2+1bY\ndMXNpEGs3g+Y5gMf+SWeir+5lwcXXw0UsRx+/YEd0qT6nB6cqJlQc1+q4/AlBLzZ\ne+MjQNQPBUbRQt/Nh0mYhHeu1cATrZyPyhKJx4MKTiANwH5Vi5J/GAk9Dc6PCTWn\nPE/v3k0E+D8SV5VZN/u5i+0g4U/XbhRCgHOTWJcuaz9VLFHNkBpDyYmZoSmKlsF2\nqoY0U6RnAgMBAAECggEAGtLzQhJOTwE6Vuc25MbZVnMyTOJ8IGGRbEhCFeOjF96t\nX5f8RHzqAzcDfQvCHT+6welHalQwBDnNeQJjAIHUMfyopRYC83pH18l3amrMULqZ\n6q/obmLQS5uwNAFzlnr04HZrLmowPYU/R4b0ECwmcpO3VU/2NkfTuy3IoDYiqvU2\n0jN7eOHIXZUPdIZH5uhzry+qlF6OplOM1RLGiNceDfZftDXtrPoGs8x61OQaVeSi\nOCC8p0eYlcITvFj4Nkf8vWArTJnI0UcFEdxIJGDLwZGI0uxPjgWRT9d1JOAxUKRK\nLK4rQYzQ8RcfuGo0GhpBT7GNr9zTSE6bwYhbtr0V+QKBgQDuEKgU9avOAZxENlbw\nUK4Jc2l01isOafeRZCkKCpS4gRglwjV1JnhI4rAsuNj2OsLXyGRGUH4TVs8x25Ve\nT3tefT3iOPX5KJC8w6leEWX+rF75qw2DJJ0ZfBEhg5960Td6aH2i83Mxpjkp6qGH\ntCh5rcR/9s/1VHqtj2PhcC5oNQKBgQDsfODpgZ09UefBKmWZI1PGvAUhtejP+08r\nPwVsXHsqY+fuLFMeO4FzR/9xW6uIa28dfHA5Qkcqt8bVOVSJjMQnJ0gzsdlslE3Y\nlaUilymCOeYAgJXGQIZzmc4zVW9SyE9tMBhGInYM0GkkLFytgGBP7+iThhsoEcvi\nXcmWX38FqwKBgQCvJlATg6AQY7ztrrEOA73XtDLdRAjPhQUg0fkjqx86E7iJZzZf\nZ5tNvIJzlNgDaL4bdhLYbLYlUlQEUZK2nXGd1jUmcFQAKWk7iBTe4ZwR4A3MUJ4T\nY2e17ULJToaSHMVdaO0ua0DQQYSDI14OcmzpAQC2SQc9bxcHBJ0uqpNqFQKBgQCA\n1ifSDwMS/SQ9YFOpck2Z36UMEIadiFRBQzw5JMkU9wjMAOnndpO3smm/4Ck7UQxg\nDAM3rpwG8cgpMeqUZVQX4Ja9Uw8Y0FL4w84LYj8C63ganfL65vxYzlpALTNQ7kAX\nRDR1QSD/KiudwW1cOKw/4Hvcoxr4YXmqAV5pxez1sQKBgDy33JgtC0nne65gp5ao\nD7orztSMSldbWdnxMEdZ/DcYrbIMT8rolEakd+/5u3MPMYkKf7ysEqQ3JHN/5ID5\nFAaRpvfTt+u6ZXVfR8kwtL4vAr0bIl77xcUOgd+jplwhVq4/jT2Li5833u2OX2d/\nlN398Sw2sw2JiDCyj2IV35ko\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-s7wyx@sih-ecoinnovators.iam.gserviceaccount.com",
+  "client_id": "102277276826028156885",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-s7wyx%40sih-ecoinnovators.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

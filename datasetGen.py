@@ -54,15 +54,19 @@ df = pd.DataFrame(
     ]
 )
 
+coal_val = np.random.uniform(12, 15)
+petrol_val = np.random.uniform(20, 43)
+ng_val = np.random.uniform(15, 36)
+
 # Populate the dataframe with synthetic data
 for month in date_rng:
     for state in states:
         coal_qty = round(np.random.uniform(0.2, 7), 2)
-        coal_val = np.random.uniform(12, 15)
+        coal_val += np.random.uniform(-1.2, 2)
         petrol_qty = round(np.random.uniform(0.5, 15), 2)
-        petrol_val = np.random.uniform(20, 43)
+        petrol_val += np.random.uniform(-4, 8)
         ng_qty = round(np.random.uniform(1, 15), 2)
-        ng_val = np.random.uniform(15, 36)
+        ng_val += np.random.uniform(-5, 7)
 
         df.loc[(month, state)] = {
             'Coal_Quantity_MTon': coal_qty,
@@ -74,4 +78,4 @@ for month in date_rng:
         }
 
 # Save the dataframe to a CSV file
-df.to_csv('Data/export_data.csv', index=True)
+df.to_csv('Data/import_data.csv', index=True)

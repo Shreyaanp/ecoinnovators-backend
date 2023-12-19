@@ -1,1 +1,1 @@
-# SIH Backend
+# EcoInnovators Backend

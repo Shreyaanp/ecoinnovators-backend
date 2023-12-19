@@ -16,3 +16,12 @@ options:
   -u, --update  Insert data to remote as append
   -d, --dump    Dump data from remote to local csv
 ```
+  
+**NOTE**: `argparse` library is required for the running of this file. Install using:
+```
+python -m pip install argparse
+```  
+or  
+```
+pip install argparse
+```

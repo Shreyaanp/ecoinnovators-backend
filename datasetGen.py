@@ -45,26 +45,33 @@ index = pd.MultiIndex.from_product(
 df = pd.DataFrame(
     index = index,
     columns = [
-        'Coal_Production_TWh',
-        'Coal_Consumption_TWh',
-        'Petroleum_Production_TWh',
-        'Petroleum_Consumption_TWh',
-        'NaturalGas_Production_TWh',
-        'NaturalGas_Consumption_TWh'
+        'Coal_Quantity_MTon',
+        'Coal_Value_Lac',
+        'Petroleum_Quantity_MTon',
+        'Petroleum_Value_Lac',
+        'NaturalGas_Quantity_MTon',
+        'NaturalGas_Value_Lac'
     ]
 )
 
 # Populate the dataframe with synthetic data
 for month in date_rng:
     for state in states:
+        coal_qty = round(np.random.uniform(0.2, 7), 2)
+        coal_val = np.random.uniform(12, 15)
+        petrol_qty = round(np.random.uniform(0.5, 15), 2)
+        petrol_val = np.random.uniform(20, 43)
+        ng_qty = round(np.random.uniform(1, 15), 2)
+        ng_val = np.random.uniform(15, 36)
+
         df.loc[(month, state)] = {
-            'Coal_Production_TWh': round(np.random.uniform(1, 10), 2),
-            'Coal_Consumption_TWh': round(np.random.uniform(1, 10), 2),
-            'Petroleum_Production_TWh': round(np.random.uniform(0.5, 5), 2),
-            'Petroleum_Consumption_TWh': round(np.random.uniform(0.5, 5), 2),
-            'NaturalGas_Production_TWh': round(np.random.uniform(2, 15), 2),
-            'NaturalGas_Consumption_TWh': round(np.random.uniform(2, 15), 2),
+            'Coal_Quantity_MTon': coal_qty,
+            'Coal_Value_Lac': round(coal_qty * coal_val, 2),
+            'Petroleum_Quantity_MTon': petrol_qty,
+            'Petroleum_Value_Lac': round(petrol_qty * petrol_val, 2),
+            'NaturalGas_Quantity_MTon': ng_qty,
+            'NaturalGas_Value_Lac': round(ng_qty * ng_val, 2),
         }
 
 # Save the dataframe to a CSV file
-df.to_csv('Data/energy_data.csv', index=True)
+df.to_csv('Data/export_data.csv', index=True)

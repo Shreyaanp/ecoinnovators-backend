@@ -2,7 +2,7 @@
 
 ## Firebase connection script usage:
 ```
-python firebaseConnection.py [-h] [remote_name] [local_name] (-f | -u | -d)
+python firebaseConnection.py [-h] remote_name local_name (-f | -u | -d)
 
 Firebase connectivity handler
 

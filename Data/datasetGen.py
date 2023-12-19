@@ -58,12 +58,12 @@ df = pd.DataFrame(
 for month in date_rng:
     for state in states:
         df.loc[(month, state)] = {
-            'Coal_Production_TWh': np.random.uniform(1, 10),
-            'Coal_Consumption_TWh': np.random.uniform(1, 10),
-            'Petroleum_Production_TWh': np.random.uniform(0.5, 5),
-            'Petroleum_Consumption_TWh': np.random.uniform(0.5, 5),
-            'NaturalGas_Production_TWh': np.random.uniform(2, 15),
-            'NaturalGas_Consumption_TWh': np.random.uniform(2, 15),
+            'Coal_Production_TWh': round(np.random.uniform(1, 10), 2),
+            'Coal_Consumption_TWh': round(np.random.uniform(1, 10), 2),
+            'Petroleum_Production_TWh': round(np.random.uniform(0.5, 5), 2),
+            'Petroleum_Consumption_TWh': round(np.random.uniform(0.5, 5), 2),
+            'NaturalGas_Production_TWh': round(np.random.uniform(2, 15), 2),
+            'NaturalGas_Consumption_TWh': round(np.random.uniform(2, 15), 2),
         }
 
 # Save the dataframe to a CSV file

@@ -1,36 +1,40 @@
 import requests
-from bs4 import BeautifulSoup
-from urllib.parse import urljoin
 import os
 
+url_root = "https://api.data.gov.in"
+urls = [
+	"/resource/8b75d7c2-814b-4eb2-9698-c96d69e5f128"
+	""
+]
+params = {
+	'api-key': '579b464db66ec23bdd000001d066d7f9ffcc46c74eb871cb59c6309e',
+	'format': 'csv',
+	'limit': '100'
+}
+fname_param = {
+	'api-key': '579b464db66ec23bdd000001d066d7f9ffcc46c74eb871cb59c6309e',
+	'format': 'json',
+	'limit': '1'
+}
+local_folder_path = 'Scraped/'
+
 def download_file(url, folder_path):
-    response = requests.get(url, stream=True)
-    file_name = url.split("/")[-1]
+	response = requests.get(url, params = params)
+	fnameres = requests.get(url, params = fname_param)
 
-    file_path = os.path.join(folder_path, file_name)
+	if response.status_code == 200 and fnameres.status_code == 200:
+		file_name = fnameres.json()["title"] + ".csv"
 
-    with open(file_path, 'wb') as file:
-        for chunk in response.iter_content(chunk_size=128):
-            file.write(chunk)
+		file_path = os.path.join(folder_path, file_name)
 
-    print(f"Downloaded: {file_name}")
+		with open(file_path, 'wb') as file:
+			for chunk in response.iter_content(chunk_size=128):
+				file.write(chunk)
 
-def scrape_and_download_data(url, folder_path):
-    response = requests.get(url)
-    soup = BeautifulSoup(response.text, 'html.parser')
+		print(f"Downloaded: {file_name}")
 
-    for link in soup.find_all('a', href=True):
-        file_url = urljoin(url, link['href'])
-        download_file(file_url, folder_path)
-
-if __name__ == "main":
-    # Replace 'YOUR_URL' with the actual URL of the dataset page
-    dataset_url = 'https://data.world/nz-stats-nz/dabe5fa6-a03f-4e46-8951-5c955f68f426'
-    
-    # Replace 'YOUR_LOCAL_FOLDER_PATH' with the folder where you want to save the downloaded files
-    local_folder_path = 'Scraped/'
-
-    # Create the folder if it doesn't exist
-    os.makedirs(local_folder_path, exist_ok=True)
-
-    scrape_and_download_data(dataset_url, local_folder_path)
+# Create the folder if it doesn't exist
+os.makedirs(local_folder_path, exist_ok=True)
+for url in urls:
+	dataset_url = url_root + url
+	download_file(dataset_url, local_folder_path)

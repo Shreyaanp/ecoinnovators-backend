@@ -12,9 +12,9 @@ def dump_to_local(dataName: str, targetFile: str):
 	sync = db.reference()
 	data = sync.get()[dataName]
 
-	data_df = pd.DataFrame(data)
+	data_df = pd.DataFrame(data, columns = data[0].keys())
 
-	data_df.to_csv(targetFile)
+	data_df.to_csv(targetFile, index = False)
 
 	print("Data dumped from " + dataName)
 

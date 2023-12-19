@@ -67,4 +67,4 @@ for month in date_rng:
         }
 
 # Save the dataframe to a CSV file
-df.to_csv('energy_data.csv', index=True)
+df.to_csv('Data/energy_data.csv', index=True)

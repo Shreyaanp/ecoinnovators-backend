@@ -23,9 +23,9 @@ def scrape_and_download_data(url, folder_path):
         file_url = urljoin(url, link['href'])
         download_file(file_url, folder_path)
 
-if _name_ == "_main_":
+if __name__ == "main":
     # Replace 'YOUR_URL' with the actual URL of the dataset page
-    dataset_url = 'YOUR_URL'
+    dataset_url = 'https://data.world/nz-stats-nz/dabe5fa6-a03f-4e46-8951-5c955f68f426'
     
     # Replace 'YOUR_LOCAL_FOLDER_PATH' with the folder where you want to save the downloaded files
     local_folder_path = 'Scraped/'

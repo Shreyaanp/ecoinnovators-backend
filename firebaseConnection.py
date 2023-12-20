@@ -1,6 +1,6 @@
 import pandas as pd
 import firebase_admin
-from firebase_admin import db, credentials
+from firebase_admin import db, credentials, storage
 
 key_location = "./sih-backend-key.json"
 firebase_url = "https://sih-ecoinnovators-default-rtdb.firebaseio.com/"
